@@ -1,7 +1,18 @@
+import statistics
+import numpy as np
+
 def mean_median(array_input):
-    mean = 1.0
-    median = 1
+    if not array_input:
+        return None
+
+    # Menghitung mean
+    mean = np.mean(array_input)
+
+    # Menghitung median
+    median = statistics.median(array_input)
+
     return (mean, median)
+
 
 if __name__ == '__main__':
     print(mean_median([1, 2, 3, 4])) # (2.5, 2.5)
